@@ -11,7 +11,7 @@ def inicializar_dados(biblioteca):
         ("Fix You", "Coldplay", "Pop Rock", 67),
         ("Hotel California", "Eagles", "Classic Rock", 110),
         ("Shake it Off", "Taylor Swift", "Pop", 160),
-        ("Everlong", "Foo Fighters", "Rock", 175)
+        ("Back in Black", "AC/DC", "Hard Rock", 175)
     ]
     
     id_atual = 1
