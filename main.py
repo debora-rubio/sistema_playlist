@@ -24,7 +24,7 @@ def inicializar_dados(biblioteca):
 
 def exibir_menu():
     print("\n" + "="*30)
-    print("      SPOTIFY DA FATEC")
+    print("      Playlist da Debs")
     print("="*30)
     print("1. Adicionar música")
     print("2. Remover música (por ID)")
