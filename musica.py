@@ -1,30 +1,14 @@
-# Classe Musica - Representa uma música na biblioteca
-# Atributos: id, titulo, artista, genero, bpm
+# Classe Musica - Armazena os dados de uma música
 
 class Musica:
-    """Classe que representa uma música na biblioteca."""
-    
+    # Construtor - recebe os dados da música e armazena
     def __init__(self, id, titulo, artista, genero, bpm):
-        """
-        Inicializa uma música com seus atributos.
-        
-        Args:
-            id: Identificador único da música
-            titulo: Nome da música
-            artista: Nome do artista
-            genero: Gênero musical
-            bpm: Batidas por minuto (velocidade)
-        """
-        self.id = id
-        self.titulo = titulo
-        self.artista = artista
-        self.genero = genero
-        self.bpm = bpm
+        self.id = id              # Número único da música
+        self.titulo = titulo      # Nome da música
+        self.artista = artista    # Quem canta
+        self.genero = genero      # Tipo de música
+        self.bpm = bpm            # Velocidade da música
     
+    # Método para mostrar a música
     def __str__(self):
-        """Retorna uma representação legível da música."""
-        return f"[{self.id}] {self.titulo} - {self.artista} ({self.genero}) - {self.bpm} BPM"
-    
-    def __repr__(self):
-        """Retorna uma representação técnica da música."""
-        return f"Musica({self.id}, '{self.titulo}', '{self.artista}', '{self.genero}', {self.bpm})"
+        return self.titulo + " - " + self.artista
