@@ -15,8 +15,9 @@ def inicializar_dados(biblioteca):
         ("Every Breath You Take", "The Police", "Rock", 117),
         ("Animals", "Maroon 5", "Pop", 120),
         ("Shake it Off", "Taylor Swift", "Pop", 160),
-        ("Natural", "Imagine Dragons", "PopRock", 162),
+        ("Natural", "Imagine Dragons", "Pop Rock", 162),
         ("Back in Black", "AC/DC", "Hard Rock", 175)
+        ("Sex on Fire", "Kings of Leon", "Rock", 170),
     ]
     
     id_atual = 1
