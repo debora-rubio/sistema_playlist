@@ -10,13 +10,15 @@ def inicializar_dados(biblioteca):
     musicas_iniciais = [
         ("Fix You", "Coldplay", "Pop Rock", 67),
         ("Bohemian Rhapsody", "Queen", "Rock", 72),
-        ("Starway to Heaven", "Led Zeppelin", "Rock", 82),
+        ("Starway to Heaven", "Led Zeppelin", "Rock", 80),
         ("Hotel California", "Eagles", "Rock", 110),
         ("Every Breath You Take", "The Police", "Rock", 117),
         ("Animals", "Maroon 5", "Pop", 120),
         ("Shake it Off", "Taylor Swift", "Pop", 160),
+        ("Thunder", "Imagine Dragons", "Pop Rock", 150),
         ("Natural", "Imagine Dragons", "Pop Rock", 162),
-        ("Back in Black", "AC/DC", "Rock", 175)
+        ("Can't Stop", "Red Hot Chili Peppers", "Rock", 171),
+        ("Back in Black", "AC/DC", "Rock", 175),
         ("Sex on Fire", "Kings of Leon", "Rock", 176),
     ]
     
