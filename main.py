@@ -11,13 +11,13 @@ def inicializar_dados(biblioteca):
         ("Fix You", "Coldplay", "Pop Rock", 67),
         ("Bohemian Rhapsody", "Queen", "Rock", 72),
         ("Starway to Heaven", "Led Zeppelin", "Rock", 82),
-        ("Hotel California", "Eagles", "Classic Rock", 110),
+        ("Hotel California", "Eagles", "Rock", 110),
         ("Every Breath You Take", "The Police", "Rock", 117),
         ("Animals", "Maroon 5", "Pop", 120),
         ("Shake it Off", "Taylor Swift", "Pop", 160),
         ("Natural", "Imagine Dragons", "Pop Rock", 162),
-        ("Back in Black", "AC/DC", "Hard Rock", 175)
-        ("Sex on Fire", "Kings of Leon", "Rock", 170),
+        ("Back in Black", "AC/DC", "Rock", 175)
+        ("Sex on Fire", "Kings of Leon", "Rock", 176),
     ]
     
     id_atual = 1
