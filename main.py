@@ -9,8 +9,13 @@ def inicializar_dados(biblioteca):
     # Lista de tuplas (Título, Artista, Gênero, BPM)
     musicas_iniciais = [
         ("Fix You", "Coldplay", "Pop Rock", 67),
+        ("Bohemian Rhapsody", "Queen", "Rock", 72),
+        ("Starway to Heaven", "Led Zeppelin", "Rock", 82),
         ("Hotel California", "Eagles", "Classic Rock", 110),
+        ("Every Breath You Take", "The Police", "Rock", 117),
+        ("Animals", "Maroon 5", "Pop", 120),
         ("Shake it Off", "Taylor Swift", "Pop", 160),
+        ("Natural", "Imagine Dragons", "PopRock", 162),
         ("Back in Black", "AC/DC", "Hard Rock", 175)
     ]
     
