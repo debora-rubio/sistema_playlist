@@ -6,7 +6,7 @@ def inicializar_dados(biblioteca):
     """
     Cadastra as músicas iniciais sugeridas para a apresentação.
     """
-    # Lista de tuplas (Título, Artista, Gênero, BPM)
+                                                        # Lista de tuplas (Título, Artista, Gênero, BPM)
     musicas_iniciais = [
         ("Fix You", "Coldplay", "Pop Rock", 67),
         ("Bohemian Rhapsody", "Queen", "Rock", 72),
@@ -28,7 +28,7 @@ def inicializar_dados(biblioteca):
         biblioteca.adicionar_musica(nova)
         id_atual += 1
     
-    return id_atual # Retorna o próximo ID disponível
+    return id_atual                                                   # Retorna o próximo ID disponível
 
 def exibir_menu():
     print("\n" + "="*30)
@@ -50,13 +50,13 @@ def main():
     minha_biblioteca = Biblioteca()
     historico = Fila()
     
-    # Filas de humor
+                                                             # Filas de humor
     fila_relaxar = Fila()
     fila_focar = Fila()
     fila_animar = Fila()
     fila_treinar = Fila()
     
-    # Inicia com as músicas sugeridas
+                                                             # Inicia com as músicas sugeridas
     proximo_id = inicializar_dados(minha_biblioteca)
 
     while True:
@@ -74,12 +74,16 @@ def main():
             except ValueError:
                 print("Erro: BPM deve ser um número inteiro.")
 
+
+
         elif opcao == "2":
             try:
                 id_alvo = int(input("ID da música para remover: "))
                 minha_biblioteca.remover_musica(id_alvo)
             except ValueError:
                 print("Erro: Digite um ID válido.")
+
+
 
         elif opcao == "3":
             termo = input("Digite o ID ou Título: ")
@@ -89,11 +93,14 @@ def main():
             else:
                 print("\nMúsica não encontrada.")
 
+
+
         elif opcao == "4":
             minha_biblioteca.listar_musicas()
 
-        elif opcao == "5":
-            # Limpa as filas para não duplicar se apertar o botão de novo
+
+            elif opcao == "5":
+            print("\nClassificando músicas por BPM...")        # Limpa as filas para remontá-las do zero.
             fila_relaxar = Fila()
             fila_focar = Fila()
             fila_animar = Fila()
@@ -102,16 +109,22 @@ def main():
             atual = minha_biblioteca.inicio
             while atual is not None:
                 m = atual.musica
+                
                 if m.bpm <= 80:
+                    print(f" > {m.titulo}: Relaxar")
                     fila_relaxar.enqueue(m)
                 elif m.bpm <= 120:
+                    print(f" > {m.titulo}: Focar")
                     fila_focar.enqueue(m)
                 elif m.bpm <= 160:
+                    print(f" > {m.titulo}: Animar")
                     fila_animar.enqueue(m)
                 else:
+                    print(f" > {m.titulo}: Treinar")
                     fila_treinar.enqueue(m)
                 atual = atual.proximo
-            print("\nFilas de humor geradas com sucesso!")
+            print("\nFinalizado! Filas de humor prontas para reprodução.")
+
 
         elif opcao == "6":
             print("\nEscolha o Humor: 1-Relaxar | 2-Focar | 3-Animar | 4-Treinar")
@@ -129,6 +142,7 @@ def main():
             else:
                 print("\nFila vazia ou opção inválida!")
 
+
         elif opcao == "7":
             print("\n1-Relaxar | 2-Focar | 3-Animar | 4-Treinar")
             h = input("Ver qual fila? ")
@@ -137,14 +151,17 @@ def main():
             elif h == "3": fila_animar.exibir_fila()
             elif h == "4": fila_treinar.exibir_fila()
 
+
         elif opcao == "8":
             print("\n--- HISTÓRICO DE REPRODUÇÃO ---")
             historico.exibir_fila()
+
 
         elif opcao == "9":
             print(f"\n--- ESTATÍSTICAS ---")
             print(f"Total na Biblioteca: {minha_biblioteca.contar()}")
             print(f"Já ouvidas: {historico.tamanho()}")
+
 
         elif opcao == "10":
             print("Encerrando o sistema...")
