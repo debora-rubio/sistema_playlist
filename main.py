@@ -99,7 +99,7 @@ def main():
             minha_biblioteca.listar_musicas()
 
 
-            elif opcao == "5":
+        elif opcao == "5":
             print("\nClassificando músicas por BPM...")        # Limpa as filas para remontá-las do zero.
             fila_relaxar = Fila()
             fila_focar = Fila()
