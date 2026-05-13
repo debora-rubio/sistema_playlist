@@ -3,9 +3,7 @@ from biblioteca import Biblioteca
 from fila import Fila
 
 def inicializar_dados(biblioteca):
-    """
-    Cadastra as músicas iniciais sugeridas para a apresentação.
-    """
+    
                                                         # Lista de tuplas (Título, Artista, Gênero, BPM)
     musicas_iniciais = [
         ("Fix You", "Coldplay", "Pop Rock", 67),
@@ -22,9 +20,9 @@ def inicializar_dados(biblioteca):
         ("Sex on Fire", "Kings of Leon", "Rock", 176),
     ]
     
-    id_atual = 1
-    for titulo, artista, genero, bpm in musicas_iniciais:
-        nova = Musica(id_atual, titulo, artista, genero, bpm)
+    id_atual = 1                                            # contador de ID das musicas, começando em 1.
+    for titulo, artista, genero, bpm in musicas_iniciais:   # for faz um laço de repetição das 12 musicas, 
+        nova = Musica(id_atual, titulo, artista, genero, bpm)  # cria um objeto Musica e adiciona na biblioteca.
         biblioteca.adicionar_musica(nova)
         id_atual += 1
     
