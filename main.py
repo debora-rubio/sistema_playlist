@@ -57,19 +57,19 @@ def main():
                                                              # Inicia com as músicas sugeridas
     proximo_id = inicializar_dados(minha_biblioteca)
 
-    while True:
+    while True:      # WHILE, enquanto o usuário não escolher sair, o programa continua rodando, mostrando o menu.
         opcao = exibir_menu()
 
         if opcao == "1":
             titulo = input("Título: ")
             artista = input("Artista: ")
             genero = input("Gênero: ")
-            try:
-                bpm = int(input("BPM: "))
+            try:          # vai tratar o erro se o usuario digitar bpm errado (por uma letra ao inves de numeros),
+                bpm = int(input("BPM: "))              
                 nova = Musica(proximo_id, titulo, artista, genero, bpm)
                 minha_biblioteca.adicionar_musica(nova)
                 proximo_id += 1
-            except ValueError:
+            except ValueError:                        # o programa continua rodando e avisa o usuário do erro.
                 print("Erro: BPM deve ser um número inteiro.")
 
 
@@ -105,19 +105,19 @@ def main():
             fila_treinar = Fila()
             
             atual = minha_biblioteca.inicio
-            while atual is not None:
-                m = atual.musica
+            while atual is not None:                             # WHILE percorre a biblioteca do início ao fim,
+                m = atual.musica                                   # classif. cada fila de humor/bpm.
                 
-                if m.bpm <= 80:
+                if m.bpm <= 80:                                  # SE.
                     print(f" > {m.titulo}: Relaxar")
                     fila_relaxar.enqueue(m)
-                elif m.bpm <= 120:
+                elif m.bpm <= 120:                               # ENQUANTO.
                     print(f" > {m.titulo}: Focar")
                     fila_focar.enqueue(m)
-                elif m.bpm <= 160:
+                elif m.bpm <= 160:                               # ENQUANTO.
                     print(f" > {m.titulo}: Animar")
                     fila_animar.enqueue(m)
-                else:
+                else:                                            # CASO CONTRÁRIO. (SE NÃO)
                     print(f" > {m.titulo}: Treinar")
                     fila_treinar.enqueue(m)
                 atual = atual.proximo
@@ -155,12 +155,12 @@ def main():
             historico.exibir_fila()
 
 
-        elif opcao == "9":
-            print(f"\n--- ESTATÍSTICAS ---")
-            print(f"Total na Biblioteca: {minha_biblioteca.contar()}")
-            print(f"Já ouvidas: {historico.tamanho()}")
-
-
+        elif opcao == "9":    # o sistema percorre as estruturas (while) para contar qtas músicas tem em cd uma.
+            print(f"\n--- ESTATÍSTICAS ---")  # o método contar cria uma variável(total, início 0) na biblioteca e outra 
+            print(f"Total na Biblioteca: {minha_biblioteca.contar()}")   # no histórico, e percorre do início ao fim,
+            print(f"Já ouvidas: {historico.tamanho()}")      # ponteiro atual aponta para o início e enquanto
+                                                        # não chegar no final (None), vai somando 1 na variável.
+                                                    
         elif opcao == "10":
             print("Encerrando o sistema...")
             break
