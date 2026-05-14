@@ -1,4 +1,4 @@
-Sistema de Playlist - Matéria de Estrutura de Dados - FATEC.
+# Sistema de Playlist - Matéria de Estrutura de Dados - FATEC.
 
 Este projeto é um sistema de gestão de biblioteca musical e filas de reprodução por humor, desenvolvido como requisito para a disciplina de Estrutura de Dados. O sistema utiliza estruturas de dados clássicas (Lista Encadeada Simples e Fila FIFO) implementadas manualmente, sem o uso de estruturas prontas do Python (como listas ou bibliotecas externas).
 
@@ -42,3 +42,7 @@ O sistema permite gerir uma biblioteca de músicas e organizá-las dinamicamente
 * IDs Sequenciais: Gerados automaticamente para cada nova música.
 * Prevenção de Duplicados: O sistema verifica se uma música com o mesmo título e artista já existe antes de adicionar.
 * Tratamento de Erros: Validação de entradas numéricas para BPM e IDs.
+
+# Implementações Futuras:
+
+Inserção de uma lista duplamente encadeada, para que o usuário possa retroceder e ir para frente nas reproduções das músicas.
