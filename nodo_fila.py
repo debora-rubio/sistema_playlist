@@ -1,4 +1,4 @@
-# Classe NodoFila - Nó de uma fila (FIFO)
+# Classe NodoFila - Nó de uma fila, lógica (FIFO) =>  filas de humor e histórico de reprodução.
 # Guarda uma música e a referência para o próximo nó
 
 from musica import Musica
