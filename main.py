@@ -1,5 +1,5 @@
 from musica import Musica
-from biblioteca import Biblioteca
+from biblioteca import Biblioteca                        # Arquivos separados por MODULARIZAÇÃO.
 from fila import Fila
 
 def inicializar_dados(biblioteca):
