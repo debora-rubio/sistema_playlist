@@ -1,4 +1,4 @@
-# Classe NodoLista - Nó de uma lista encadeada
+# Classe NodoLista - Nó de uma lista encadeada   => usada na biblioteca para guardar as músicas cadastradas.
 # Guarda uma música e a referência para o próximo nó
 
 from musica import Musica
