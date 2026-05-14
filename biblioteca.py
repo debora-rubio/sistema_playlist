@@ -1,5 +1,5 @@
-# Classe Biblioteca - Lista encadeada simples de músicas
-# Ela guarda todas as músicas cadastradas no sistema.
+# Classe Biblioteca - Lista encadeada simples de músicas ((SE FOSSE DUPLAMENTE ENCADEADA, APONTARIA PRA FRENTE))
+# Ela guarda todas as músicas cadastradas no sistema.                ((E PARA TRAZ, MUDANDO NODO_LISTA ))
 from musica import Musica
 from nodo_lista import NodoLista
 
